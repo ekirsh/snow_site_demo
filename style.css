@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.logo img {
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    width: 100%;
+    height: auto;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social a {
+    display: flex;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.social a:last-child {
+    margin-right: 0;
+}
+
+.social a img {
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    width: 105px;
+}
+
+.fog-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.38;
+}
+
+.fog-container {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('snowwife1.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .logo img {
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+        max-width: 100%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        margin-bottom: 5px;
+    }
+
+    .social {
+        margin-bottom: 5px;
+    }
+
+    .social a {
+        margin: 5px;
+    }
+
+    .background {
+        background-position: center;
+    }
+}
+
